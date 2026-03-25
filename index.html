@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Codes Library</title>
+    <meta name="description" content="Browse, preview, and download C programs and compiled binaries.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" integrity="sha512-6IZqVY9Tq5L0vMIYIfJfnLyMh0J8M2v+S2gFca1K4B5w9DhFqon7iu4kJH2gQm4M7rJ0YbySPeYvkpstRyn2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="hero">
+            <div class="hero__copy">
+                <p class="eyebrow">Static C Program Archive</p>
+                <h1>Browse source files, preview code, and download builds.</h1>
+                <p class="hero__text">
+                    This catalog is powered by <code>data/files.json</code> and client-side fetch calls. No source code is hardcoded into the HTML.
+                </p>
+            </div>
+            <div class="hero__meta">
+                <div class="meta-card">
+                    <span class="meta-card__label">Programs</span>
+                    <strong id="file-count">0</strong>
+                </div>
+                <div class="meta-card">
+                    <span class="meta-card__label">Hosting</span>
+                    <strong>GitHub Pages Ready</strong>
+                </div>
+            </div>
+        </header>
+
+        <section class="toolbar" aria-label="Program search and filter">
+            <label class="search">
+                <span class="search__label">Search programs</span>
+                <input id="search-input" type="search" placeholder="Filter by file name or description">
+            </label>
+            <p id="status-message" class="status-message" role="status" aria-live="polite">Loading programs...</p>
+        </section>
+
+        <main>
+            <section id="program-grid" class="program-grid" aria-label="C programs"></section>
+        </main>
+    </div>
+
+    <div id="viewer-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="viewer-title">
+        <div class="modal__backdrop" data-close-modal="true"></div>
+        <div class="modal__panel">
+            <div class="modal__header">
+                <div>
+                    <p class="modal__eyebrow">Code Preview</p>
+                    <h2 id="viewer-title">Program source</h2>
+                </div>
+                <button id="close-modal" class="icon-button" type="button" aria-label="Close code viewer">Close</button>
+            </div>
+
+            <div class="modal__actions">
+                <a id="download-code-link" class="button button--ghost" href="#" download>Download Code</a>
+                <a id="download-binary-link" class="button button--ghost" href="#" download>Download Binary</a>
+                <button id="copy-code-button" class="button button--primary" type="button">Copy Code</button>
+            </div>
+
+            <p id="viewer-feedback" class="viewer-feedback" role="status" aria-live="polite"></p>
+
+            <pre class="code-block"><code id="viewer" class="language-c"></code></pre>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js" integrity="sha512-sA0F0RPF0+1z4N2VNivgxmXcX4Jt9V7H5PHeTtQKgJGdwNwp0UrEGouGZWlznImPi0tLxe3LjQp8dkUBaRdOyA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-clike.min.js" integrity="sha512-Z3l8Y7A1srO2Qd6hw2yYB9H9n1tFoZT3zh0+BTtPlqvGjufH6G+j6lJzi10BGSAdoo6gWQBaIj++ImQxGc1dQcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js" integrity="sha512-EWI7Qq4JtG6HC8K3opgVetwcYqKqRR3YKHyCuXapnwYfJOLLmObAun1vDLteA94ppIqhzyapMI2vlA38nSxr2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>

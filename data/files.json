@@ -1,0 +1,110 @@
+[
+  {
+    "name": "average_of_three_numbers",
+    "description": "C program for average_of_three_numbers",
+    "code_file": "code/average_of_three_numbers.c",
+    "binary_file": "bin/average_of_three_numbers.zip"
+  },
+  {
+    "name": "bubble_sort",
+    "description": "C program for bubble_sort",
+    "code_file": "code/bubble_sort.c",
+    "binary_file": "bin/bubble_sort.zip"
+  },
+  {
+    "name": "celsius_to_fahrenheit",
+    "description": "C program for celsius_to_fahrenheit",
+    "code_file": "code/celsius_to_fahrenheit.c",
+    "binary_file": "bin/celsius_to_fahrenheit.zip"
+  },
+  {
+    "name": "even_odd_check",
+    "description": "C program for even_odd_check",
+    "code_file": "code/even_odd_check.c",
+    "binary_file": "bin/even_odd_check.zip"
+  },
+  {
+    "name": "even_odd_function",
+    "description": "C program for even_odd_function",
+    "code_file": "code/even_odd_function.c",
+    "binary_file": "bin/even_odd_function.zip"
+  },
+  {
+    "name": "factorial_iterative",
+    "description": "C program for factorial_iterative",
+    "code_file": "code/factorial_iterative.c",
+    "binary_file": "bin/factorial_iterative.zip"
+  },
+  {
+    "name": "factorial_recursive",
+    "description": "C program for factorial_recursive",
+    "code_file": "code/factorial_recursive.c",
+    "binary_file": "bin/factorial_recursive.zip"
+  },
+  {
+    "name": "grade_calculator",
+    "description": "C program for grade_calculator",
+    "code_file": "code/grade_calculator.c",
+    "binary_file": "bin/grade_calculator.zip"
+  },
+  {
+    "name": "largest_of_three_numbers",
+    "description": "C program for largest_of_three_numbers",
+    "code_file": "code/largest_of_three_numbers.c",
+    "binary_file": "bin/largest_of_three_numbers.zip"
+  },
+  {
+    "name": "matrix_addition",
+    "description": "C program for matrix_addition",
+    "code_file": "code/matrix_addition.c",
+    "binary_file": "bin/matrix_addition.zip"
+  },
+  {
+    "name": "matrix_transpose",
+    "description": "C program for matrix_transpose",
+    "code_file": "code/matrix_transpose.c",
+    "binary_file": "bin/matrix_transpose.zip"
+  },
+  {
+    "name": "odd_or_even_check",
+    "description": "C program for odd_or_even_check",
+    "code_file": "code/odd_or_even_check.c",
+    "binary_file": "bin/odd_or_even_check.zip"
+  },
+  {
+    "name": "prime_number_check",
+    "description": "C program for prime_number_check",
+    "code_file": "code/prime_number_check.c",
+    "binary_file": "bin/prime_number_check.zip"
+  },
+  {
+    "name": "print_numbers_upto_n",
+    "description": "C program for print_numbers_upto_n",
+    "code_file": "code/print_numbers_upto_n.c",
+    "binary_file": "bin/print_numbers_upto_n.zip"
+  },
+  {
+    "name": "rectangle_area_perimeter",
+    "description": "C program for rectangle_area_perimeter",
+    "code_file": "code/rectangle_area_perimeter.c",
+    "binary_file": "bin/rectangle_area_perimeter.zip"
+  },
+  {
+    "name": "simple_calculator",
+    "description": "C program for simple_calculator",
+    "code_file": "code/simple_calculator.c",
+    "binary_file": "bin/simple_calculator.zip"
+  },
+  {
+    "name": "sum_three_numbers",
+    "description": "C program for sum_three_numbers",
+    "code_file": "code/sum_three_numbers.c",
+    "binary_file": "bin/sum_three_numbers.zip"
+  },
+  {
+    "name": "sum_two_numbers",
+    "description": "C program for sum_two_numbers",
+    "code_file": "code/sum_two_numbers.c",
+    "binary_file": "bin/sum_two_numbers.zip"
+  }
+]
