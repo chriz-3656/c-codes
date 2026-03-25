@@ -1,77 +1,73 @@
-# C Programs Archive Website
+# C Programs Archive 🚀
 
-## Description
+Deployed on Cloudflare Pages ☁️  
+Fast, secure, and globally distributed.
 
-This project is a dynamic static website for browsing, previewing, and downloading C programs. It is designed to work entirely on the frontend using JSON metadata and `fetch()` to load source files on demand, making it suitable for lightweight hosting on GitHub Pages.
+## Live Demo
 
-Users can:
+- 🌐 Cloudflare Pages: https://c-codes.pages.dev/
+- 🔍 Easy Access Link: https://c-codes.pages.dev/
+- 💻 GitHub Repo: https://github.com/chriz-3656/c-codes
 
-- Browse a catalog of C programs
-- Preview source code dynamically in the browser
-- Download `.c` source files
-- Download compiled binaries as `.zip` archives
+## Overview
+
+This project is a dynamic static website for exploring C programs through a clean, developer-focused interface. It lets users browse programs, preview source code dynamically, and download both source files and compiled binaries without hardcoding any C code into the HTML.
+
+Core capabilities include:
+
+- Code preview loaded dynamically
+- Downloadable source files and binaries
+- Fast search and filtering
+- Clean developer-focused UI
 
 ## Features
 
-- Dynamic loading via JSON with no hardcoded source code inside the HTML
-- Code preview powered by `fetch()`
-- Downloadable `.c` source files and binary archives
-- Search and filtering support
-- Responsive UI for mobile, tablet, and desktop
-- GitHub Pages ready deployment
+- ⚡ Dynamic code loading using JSON + `fetch()`
+- 🔍 Real-time search filtering
+- 📥 Download `.c` files and binaries
+- 🎨 Modern dark UI
+- 📱 Fully responsive design
+- ☁️ Deployed on Cloudflare Pages
+- 🔒 No hardcoded source code
 
 ## Tech Stack
 
 - HTML5
-- CSS3
+- CSS3 (Responsive + Grid)
 - JavaScript (Vanilla)
 - JSON
 - Prism.js
+- Cloudflare Pages
 
 ## Project Structure
 
 ```text
-.
-├── bin/
-│   └── *.zip
-├── code/
-│   └── *.c
-├── data/
-│   └── files.json
-├── index.html
-├── script.js
-├── style.css
-└── README.md
+code/
+bin/
+data/
+index.html
+style.css
+script.js
 ```
 
 ## How It Works
 
-The site does not store program source code directly inside the page markup.
+- `files.json` stores metadata for each program
+- JavaScript dynamically loads the program list
+- `fetch()` loads the actual `.c` files on demand
+- No backend is required
 
-1. `data/files.json` stores metadata for each C program.
-2. `script.js` fetches the JSON file and builds the program cards dynamically.
-3. When a user clicks `View Code`, the related `.c` file is fetched from the `code/` directory.
-4. The source is safely rendered using `textContent`, then highlighted with Prism.js.
-5. Source files and binary archives are served as static downloads.
+The site is fully static, but still behaves dynamically by separating data, UI, and source file delivery.
 
-No backend or database is required.
-
-## Setup Instructions
-
-1. Clone the repository:
+## Setup (Local)
 
 ```bash
 git clone https://github.com/chriz-3656/c-codes.git
 cd c-codes
-```
-
-2. Start a local static server:
-
-```bash
 python3 -m http.server 8000
 ```
 
-3. Open the project in your browser:
+Open:
 
 ```text
 http://localhost:8000
@@ -79,36 +75,48 @@ http://localhost:8000
 
 ## Deployment
 
-This project is ready for GitHub Pages.
+### Cloudflare Pages
 
-1. Push the repository to GitHub.
-2. Open the repository `Settings`.
-3. Go to `Pages`.
-4. Under `Build and deployment`, select `Deploy from a branch`.
-5. Choose branch `main`.
-6. Choose folder `/ (root)`.
-7. Save the configuration.
+- Connect the GitHub repository
+- Select branch: `main`
+- Build command: none
+- Output directory: `/`
+- Enable auto deploy
 
-After deployment, the site will be available at:
+### GitHub Pages (Optional)
 
-```text
-https://chriz-3656.github.io/c-codes/
-```
+- Enable GitHub Pages in repository settings
+- Select the `main` branch
 
 ## Screenshots
 
-Screenshots can be added here later:
+Add screenshot placeholder here:
 
-- Homepage preview
-- Code viewer modal
+- Homepage
+- Code preview modal
 - Mobile responsive layout
 
-## Developer
+## Developer 👨‍💻
 
-- Name: Chriz
+Chriz  
+Cybersecurity student & developer
+
 - GitHub: https://github.com/chriz-3656
 - Portfolio: https://chriz-3656.github.io
 
+## Highlights
+
+- Fully static yet dynamic behavior
+- Scalable architecture driven by JSON
+- Clean separation of data and UI
+
+## Future Improvements
+
+- WASM-based C execution in the browser
+- File hash verification with SHA256
+- Category filters
+- Analytics dashboard
+
 ## License
 
-MIT
+MIT License
