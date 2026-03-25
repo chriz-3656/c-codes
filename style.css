@@ -273,6 +273,7 @@ pre {
     max-height: min(86vh, 920px);
     padding: 1.25rem;
     display: grid;
+    grid-template-rows: auto auto auto minmax(0, 1fr);
     gap: 1rem;
     background: rgba(7, 18, 33, 0.98);
     border: 1px solid var(--border);
@@ -300,11 +301,15 @@ pre {
 
 .code-block {
     margin: 0;
+    min-height: 0;
+    height: 100%;
+    max-height: 100%;
     padding: 1rem;
     border-radius: 18px;
     background: #0b1627;
     border: 1px solid rgba(255, 255, 255, 0.08);
     overflow: auto;
+    white-space: pre;
 }
 
 .empty-state {
