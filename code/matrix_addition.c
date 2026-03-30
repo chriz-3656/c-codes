@@ -1,31 +1,30 @@
 #include <stdio.h>
 
-#define MAX_SIZE 10
-
-int main(void)
-{
-    int a[MAX_SIZE][MAX_SIZE], b[MAX_SIZE][MAX_SIZE], s[MAX_SIZE][MAX_SIZE];
+int main() {
+    int a[10][10], b[10][10], s[10][10];
     int r, c, i, j;
 
-    printf("Enter the number of rows and columns (1-10): ");
+    printf("Enter rows and columns: ");
     scanf("%d %d", &r, &c);
-    printf("Enter the elements of the first matrix:\n");
-    for (i = 0; i < r; i++)
-        for (j = 0; j < c; j++)
-            scanf("%d", &a[i][j]);
 
-    printf("Enter the elements of the second matrix:\n");
-    for (i = 0; i < r; i++)
-        for (j = 0; j < c; j++)
-            scanf("%d", &b[i][j]);
+    printf("Enter first matrix:\n");
+    for(i=0;i<r;i++)
+        for(j=0;j<c;j++)
+            scanf("%d",&a[i][j]);
 
-    for (i = 0; i < r; i++)
-        for (j = 0; j < c; j++)
+    printf("Enter second matrix:\n");
+    for(i=0;i<r;i++)
+        for(j=0;j<c;j++)
+            scanf("%d",&b[i][j]);
+
+    for(i=0;i<r;i++)
+        for(j=0;j<c;j++)
             s[i][j] = a[i][j] + b[i][j];
 
-    printf("Sum of the matrices:\n");
-    for (i = 0; i < r; i++) {
-        for (j = 0; j < c; j++) printf("%d\t", s[i][j]);
+    printf("Sum matrix:\n");
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++)
+            printf("%d ", s[i][j]);
         printf("\n");
     }
 
