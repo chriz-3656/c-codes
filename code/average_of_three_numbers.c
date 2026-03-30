@@ -1,27 +1,20 @@
 #include <stdio.h>
 
-double calculate_average(int first_number, int second_number, int third_number);
+double avg(int a, int b, int c);
 
 int main(void)
 {
-    int first_number;
-    int second_number;
-    int third_number;
-    double average;
+    int a, b, c;
+    double d;
 
     printf("Enter three numbers: ");
-    if (scanf("%d %d %d", &first_number, &second_number, &third_number) != 3) {
-        printf("Invalid input.\n");
-        return 1;
-    }
-
-    average = calculate_average(first_number, second_number, third_number);
-    printf("Average = %.2f\n", average);
-
+    scanf("%d %d %d", &a, &b, &c);
+    d = avg(a, b, c);
+    printf("Average = %.2f\n", d);
     return 0;
 }
 
-double calculate_average(int first_number, int second_number, int third_number)
+double avg(int a, int b, int c)
 {
-    return (first_number + second_number + third_number) / 3.0;
+    return (a + b + c) / 3.0;
 }

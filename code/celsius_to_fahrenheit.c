@@ -2,17 +2,10 @@
 
 int main(void)
 {
-    double celsius;
-    double fahrenheit;
+    float c;
 
     printf("Enter temperature in Celsius: ");
-    if (scanf("%lf", &celsius) != 1) {
-        printf("Invalid input.\n");
-        return 1;
-    }
-
-    fahrenheit = (celsius * 9.0 / 5.0) + 32.0;
-    printf("Temperature in Fahrenheit = %.2f\n", fahrenheit);
-
+    scanf("%f", &c);
+    printf("Temperature in Fahrenheit = %.2f\n", (c * 9 / 5) + 32.0);
     return 0;
 }

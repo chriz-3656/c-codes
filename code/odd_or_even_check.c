@@ -2,19 +2,13 @@
 
 int main(void)
 {
-    int number;
+    int n;
 
     printf("Enter your value: ");
-    if (scanf("%d", &number) != 1) {
-        printf("Invalid input.\n");
-        return 1;
-    }
-
-    if (number % 2 == 0) {
-        printf("%d is even.\n", number);
-    } else {
-        printf("%d is odd.\n", number);
-    }
-
+    scanf("%d", &n);
+    if (n % 2 == 0)
+        printf("%d is even.\n", n);
+    else
+        printf("%d is odd.\n", n);
     return 0;
 }

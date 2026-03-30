@@ -4,43 +4,24 @@
 
 int main(void)
 {
-    int matrix[MAX_SIZE][MAX_SIZE];
-    int rows;
-    int columns;
-    int i;
-    int j;
+    int a[MAX_SIZE][MAX_SIZE], r, c, i, j;
 
     printf("Enter the number of rows and columns (1-10): ");
-    if (scanf("%d %d", &rows, &columns) != 2 ||
-        rows < 1 || rows > MAX_SIZE ||
-        columns < 1 || columns > MAX_SIZE) {
-        printf("Invalid matrix size.\n");
-        return 1;
-    }
-
+    scanf("%d %d", &r, &c);
     printf("Enter the elements of the matrix:\n");
-    for (i = 0; i < rows; i++) {
-        for (j = 0; j < columns; j++) {
-            if (scanf("%d", &matrix[i][j]) != 1) {
-                printf("Invalid input.\n");
-                return 1;
-            }
-        }
-    }
+    for (i = 0; i < r; i++)
+        for (j = 0; j < c; j++)
+            scanf("%d", &a[i][j]);
 
     printf("Original matrix:\n");
-    for (i = 0; i < rows; i++) {
-        for (j = 0; j < columns; j++) {
-            printf("%d\t", matrix[i][j]);
-        }
+    for (i = 0; i < r; i++) {
+        for (j = 0; j < c; j++) printf("%d\t", a[i][j]);
         printf("\n");
     }
 
     printf("Transpose of the matrix:\n");
-    for (i = 0; i < columns; i++) {
-        for (j = 0; j < rows; j++) {
-            printf("%d\t", matrix[j][i]);
-        }
+    for (i = 0; i < c; i++) {
+        for (j = 0; j < r; j++) printf("%d\t", a[j][i]);
         printf("\n");
     }
 

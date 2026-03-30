@@ -1,32 +1,21 @@
 #include <stdio.h>
 
-int find_sum(int first_number, int second_number);
+int sum(int a, int b);
 
 int main(void)
 {
-    int first_number;
-    int second_number;
-    int sum;
+    int a, b, s;
 
     printf("Enter the first number: ");
-    if (scanf("%d", &first_number) != 1) {
-        printf("Invalid input.\n");
-        return 1;
-    }
-
+    scanf("%d", &a);
     printf("Enter the second number: ");
-    if (scanf("%d", &second_number) != 1) {
-        printf("Invalid input.\n");
-        return 1;
-    }
-
-    sum = find_sum(first_number, second_number);
-    printf("Sum of %d and %d is %d\n", first_number, second_number, sum);
-
+    scanf("%d", &b);
+    s = sum(a, b);
+    printf("Sum of %d and %d is %d\n", a, b, s);
     return 0;
 }
 
-int find_sum(int first_number, int second_number)
+int sum(int a, int b)
 {
-    return first_number + second_number;
+    return a + b;
 }

@@ -2,22 +2,11 @@
 
 int main(void)
 {
-    double length;
-    double breadth;
-    double area;
-    double perimeter;
+    float l, b;
 
     printf("Enter the length and breadth of the rectangle: ");
-    if (scanf("%lf %lf", &length, &breadth) != 2 || length <= 0 || breadth <= 0) {
-        printf("Invalid input.\n");
-        return 1;
-    }
-
-    area = length * breadth;
-    perimeter = 2.0 * (length + breadth);
-
-    printf("Area of rectangle = %.2f\n", area);
-    printf("Perimeter of rectangle = %.2f\n", perimeter);
-
+    scanf("%f %f", &l, &b);
+    printf("Area of rectangle = %.2f\n", l * b);
+    printf("Perimeter of rectangle = %.2f\n", 2 * (l + b));
     return 0;
 }

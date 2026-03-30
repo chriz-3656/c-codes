@@ -2,37 +2,31 @@
 
 int main(void)
 {
-    char operator_symbol;
-    double first_number;
-    double second_number;
-    double result;
+    char op;
+    float a, b, r;
 
     printf("Enter the expression (example: 5 + 3): ");
-    if (scanf("%lf %c %lf", &first_number, &operator_symbol, &second_number) != 3) {
-        printf("Invalid input.\n");
-        return 1;
-    }
-
-    switch (operator_symbol) {
+    scanf("%f %c %f", &a, &op, &b);
+    switch (op) {
         case '+':
-            result = first_number + second_number;
-            printf("Result = %.2f\n", result);
+            r = a + b;
+            printf("Result = %.2f\n", r);
             break;
         case '-':
-            result = first_number - second_number;
-            printf("Result = %.2f\n", result);
+            r = a - b;
+            printf("Result = %.2f\n", r);
             break;
         case '*':
-            result = first_number * second_number;
-            printf("Result = %.2f\n", result);
+            r = a * b;
+            printf("Result = %.2f\n", r);
             break;
         case '/':
-            if (second_number == 0.0) {
+            if (b == 0.0) {
                 printf("Division by zero is not allowed.\n");
                 return 1;
             }
-            result = first_number / second_number;
-            printf("Result = %.2f\n", result);
+            r = a / b;
+            printf("Result = %.2f\n", r);
             break;
         default:
             printf("Invalid operator.\n");

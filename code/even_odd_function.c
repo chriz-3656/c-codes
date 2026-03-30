@@ -1,28 +1,24 @@
 #include <stdio.h>
 
-void print_even_or_odd(int number);
+void check(int n);
 
 int main(void)
 {
-    int number;
+    int n;
 
     printf("Enter a number: ");
-    if (scanf("%d", &number) != 1) {
-        printf("Invalid input.\n");
-        return 1;
-    }
-
-    print_even_or_odd(number);
+    scanf("%d", &n);
+    check(n);
     return 0;
 }
 
-void print_even_or_odd(int number)
+void check(int n)
 {
-    if (number == 0) {
+    if (n == 0) {
         printf("0 is even.\n");
-    } else if (number % 2 == 0) {
-        printf("%d is an even number.\n", number);
+    } else if (n % 2 == 0) {
+        printf("%d is an even number.\n", n);
     } else {
-        printf("%d is an odd number.\n", number);
+        printf("%d is an odd number.\n", n);
     }
 }

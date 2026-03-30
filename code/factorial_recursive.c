@@ -1,29 +1,23 @@
 #include <stdio.h>
 
-unsigned long long factorial(int number);
+unsigned long long fact(int n);
 
 int main(void)
 {
-    int number;
-    unsigned long long result;
+    int n;
+    unsigned long long f;
 
     printf("Enter a non-negative number (0-20): ");
-    if (scanf("%d", &number) != 1 || number < 0 || number > 20) {
-        printf("Invalid input.\n");
-        return 1;
-    }
-
-    result = factorial(number);
-    printf("Factorial of %d is %llu\n", number, result);
-
+    scanf("%d", &n);
+    f = fact(n);
+    printf("Factorial of %d is %llu\n", n, f);
     return 0;
 }
 
-unsigned long long factorial(int number)
+unsigned long long fact(int n)
 {
-    if (number == 0 || number == 1) {
+    if (n == 0 || n == 1) {
         return 1;
     }
-
-    return (unsigned long long)number * factorial(number - 1);
+    return (unsigned long long)n * fact(n - 1);
 }

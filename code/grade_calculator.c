@@ -2,23 +2,19 @@
 
 int main(void)
 {
-    int mark;
+    int m;
 
     printf("Enter the mark (0-100): ");
-    if (scanf("%d", &mark) != 1 || mark < 0 || mark > 100) {
-        printf("Invalid mark.\n");
-        return 1;
-    }
-
-    if (mark >= 90) {
+    scanf("%d", &m);
+    if (m >= 90) {
         printf("Grade is A\n");
-    } else if (mark >= 80) {
+    } else if (m >= 80) {
         printf("Grade is B\n");
-    } else if (mark >= 70) {
+    } else if (m >= 70) {
         printf("Grade is C\n");
-    } else if (mark >= 60) {
+    } else if (m >= 60) {
         printf("Grade is D\n");
-    } else if (mark >= 50) {
+    } else if (m >= 50) {
         printf("Grade is E\n");
     } else {
         printf("Fail\n");

@@ -4,53 +4,28 @@
 
 int main(void)
 {
-    int first_matrix[MAX_SIZE][MAX_SIZE];
-    int second_matrix[MAX_SIZE][MAX_SIZE];
-    int sum_matrix[MAX_SIZE][MAX_SIZE];
-    int rows;
-    int columns;
-    int i;
-    int j;
+    int a[MAX_SIZE][MAX_SIZE], b[MAX_SIZE][MAX_SIZE], s[MAX_SIZE][MAX_SIZE];
+    int r, c, i, j;
 
     printf("Enter the number of rows and columns (1-10): ");
-    if (scanf("%d %d", &rows, &columns) != 2 ||
-        rows < 1 || rows > MAX_SIZE ||
-        columns < 1 || columns > MAX_SIZE) {
-        printf("Invalid matrix size.\n");
-        return 1;
-    }
-
+    scanf("%d %d", &r, &c);
     printf("Enter the elements of the first matrix:\n");
-    for (i = 0; i < rows; i++) {
-        for (j = 0; j < columns; j++) {
-            if (scanf("%d", &first_matrix[i][j]) != 1) {
-                printf("Invalid input.\n");
-                return 1;
-            }
-        }
-    }
+    for (i = 0; i < r; i++)
+        for (j = 0; j < c; j++)
+            scanf("%d", &a[i][j]);
 
     printf("Enter the elements of the second matrix:\n");
-    for (i = 0; i < rows; i++) {
-        for (j = 0; j < columns; j++) {
-            if (scanf("%d", &second_matrix[i][j]) != 1) {
-                printf("Invalid input.\n");
-                return 1;
-            }
-        }
-    }
+    for (i = 0; i < r; i++)
+        for (j = 0; j < c; j++)
+            scanf("%d", &b[i][j]);
 
-    for (i = 0; i < rows; i++) {
-        for (j = 0; j < columns; j++) {
-            sum_matrix[i][j] = first_matrix[i][j] + second_matrix[i][j];
-        }
-    }
+    for (i = 0; i < r; i++)
+        for (j = 0; j < c; j++)
+            s[i][j] = a[i][j] + b[i][j];
 
     printf("Sum of the matrices:\n");
-    for (i = 0; i < rows; i++) {
-        for (j = 0; j < columns; j++) {
-            printf("%d\t", sum_matrix[i][j]);
-        }
+    for (i = 0; i < r; i++) {
+        for (j = 0; j < c; j++) printf("%d\t", s[i][j]);
         printf("\n");
     }
 
